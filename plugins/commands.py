@@ -83,9 +83,10 @@ async def start(client, message):
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
+           
             chat_id=message.from_user.id,
-            text="**Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**"
-You Need to Join Our Channel to Use me
+            text="**Hello {u.mention}💗\nJoin Our Movie Updates Channel To Use Me ☺️**\nYou Need to Join Our Channel to Use me\n
+
 Kindly Please Join Our Channel</b>",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
